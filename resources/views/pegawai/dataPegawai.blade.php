@@ -17,7 +17,6 @@
                 <th>Kelurahan</th>
                 <th>Kecamatan</th>
                 <th>Provinsi</th>
-                <th>Active</th>
                 <th>Action</th>
             </tr>
         </thead>

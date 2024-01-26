@@ -36,8 +36,8 @@ class KelurahanController extends Controller
     public function edit($id)
     {
         $kecamatan = Kecamatan::get();
-        $kel = Kelurahan::find($id)->first();
-        return view('kelurahan.editDesa', compact('kel', 'kecamatan'));
+        $des = Kelurahan::find($id)->first();
+        return view('kelurahan.editDesa', compact('des', 'kecamatan'));
     }
 
     public function update(Request $request, $id)

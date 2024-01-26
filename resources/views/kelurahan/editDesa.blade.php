@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
             <label for="nama_kelurahan">Nama Kelurahan</label>
-            <input type="text" class="form-control" id="nama_kelurahan" name="nama_kelurahan" value="{{$prov->nama_kelurahan}}" placeholder="Nama Kelurahan">
+            <input type="text" class="form-control" id="nama_kelurahan" name="nama_kelurahan" value="{{$des->nama_kelurahan}}" placeholder="Nama Kelurahan">
         </div>
 
         <div class="form-group">
@@ -27,10 +27,10 @@
         <div class="form-group">
             <label for="active">Status Kelurahan</label>
             <select class="form-control" id="active" name="active">
-                @if($prov->active == 1)
+                @if($des->active == 1)
                 <option value="1" selected>Aktif</option>
                 <option value="2">Tidak Aktif</option>
-                @elseif($prov->active == 2)
+                @elseif($des->active == 2)
                 <option value="1">Aktif</option>
                 <option value="2" selected>Tidak Aktif</option>
                 @endif

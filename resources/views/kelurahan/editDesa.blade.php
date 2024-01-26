@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <form action="{{route('desa.updated', $des->id)}}" method="POST">
+    <form action="{{route('kelurahan.updated', $des->id)}}" method="POST">
         @csrf
         @method('POST')
         <div class="form-group">
@@ -20,6 +20,7 @@
             <select class="form-control" id="nama_kecamatan" name="nama_kecamatan">
                 @foreach($kecamatan as $kec)
                 <option value="{{$kec->nama_kecamatan}}">{{$kec->nama_kecamatan}}</option>
+                @endforeach
             </select>
         </div>
 

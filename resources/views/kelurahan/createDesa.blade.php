@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <form action="{{route('desa.store')}}" method="post">
+    <form action="{{route('kelurahan.store')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="kode">Kode Kelurahan</label>
@@ -18,7 +18,9 @@
             <select class="form-control" id="nama_kecamatan" name="nama_kecamatan">
                 @foreach($kecamatan as $kec)
                 <option value="{{$kec->nama_kecamatan}}">{{$kec->nama_kecamatan}}</option>
+                @endforeach
             </select>
+
         </div>
 
         <div class="form-group">

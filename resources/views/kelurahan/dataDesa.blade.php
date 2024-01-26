@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <a href="{{route('desa.create')}}" class="btn btn-primary">Tambah Data</a>
+    <a href="{{route('kelurahan.create')}}" class="btn btn-primary">Tambah Data</a>
 
     <table class="table table-bordered">
         <thead>
@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($desa as $des)
+            @foreach($kelurahan as $des)
             <tr>
                 <td>{{$des->id}}</td>
                 <td>{{$des->kode}}</td>
@@ -30,8 +30,8 @@
                 </td>
                 <td>
                     <div class="btn-group" style="width:135px">
-                        <form action="{{route('desa.delete',$des->id)}}" method="POST">
-                            <a href="{{route('desa.edit',$des->id)}}" class="btn btn-primary">Edit</a>
+                        <form action="{{route('kelurahan.delete',$des->id)}}" method="POST">
+                            <a href="{{route('kelurahan.edit',$des->id)}}" class="btn btn-primary">Edit</a>
                             @csrf
                             @method('POST')
                             <button type="submit" class="btn btn-danger">Delete</button>

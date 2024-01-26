@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kecamatan;
 use App\Models\Kelurahan;
 use Illuminate\Http\Request;
 
@@ -10,12 +11,13 @@ class KelurahanController extends Controller
     public function index()
     {
         $kelurahan = Kelurahan::paginate(5);
-        return view('kelurahan.dataKelurahan', compact('kelurahan'));
+        return view('kelurahan.dataDesa', compact('kelurahan'));
     }
 
     public function create()
     {
-        return view('kelurahan.createKelurahan');
+        $kecamatan = Kecamatan::get();
+        return view('kelurahan.createDesa', compact('kecamatan'));
     }
 
     public function store(Request $request)
@@ -33,8 +35,9 @@ class KelurahanController extends Controller
 
     public function edit($id)
     {
+        $kecamatan = Kecamatan::get();
         $kel = Kelurahan::find($id)->first();
-        return view('kelurahan.editKelurahan', compact('kel'));
+        return view('kelurahan.editDesa', compact('kel', 'kecamatan'));
     }
 
     public function update(Request $request, $id)

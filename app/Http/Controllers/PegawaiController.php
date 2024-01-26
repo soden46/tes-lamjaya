@@ -21,7 +21,7 @@ class PegawaiController extends Controller
     {
         $kelurahan = Kelurahan::get();
         $kecamatan = Kecamatan::get();
-        $Provinsi = Provinsi::get();
+        $provinsi = Provinsi::get();
         return view('pegawai.createPegawai', compact('kelurahan', 'kecamatan', 'provinsi'));
     }
 
@@ -47,7 +47,7 @@ class PegawaiController extends Controller
     {
         $kelurahan = Kelurahan::get();
         $kecamatan = Kecamatan::get();
-        $Provinsi = Provinsi::get();
+        $provinsi = Provinsi::get();
         $peg = Pegawai::find($id)->first();
         return view('pegawai.editPegawai', compact('peg', 'kelurahan', 'kecamatan', 'provinsi'));
     }

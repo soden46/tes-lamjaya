@@ -13,6 +13,10 @@
                 <th>Tgl Lahir</th>
                 <th>Jenis Kelamin</th>
                 <th>Agama</th>
+                <th>Alamat</th>
+                <th>Kelurahan</th>
+                <th>Kecamatan</th>
+                <th>Provinsi</th>
                 <th>Active</th>
                 <th>Action</th>
             </tr>
@@ -21,9 +25,16 @@
             @foreach($pegawai as $kar)
             <tr>
                 <td>{{$kar->id}}</td>
-                <td>{{$kar->kode}}</td>
-                <td>{{$kar->nama_kecamatan}}</td>
-
+                <td>{{$kar->nama_pegawai}}</td>
+                <td>{{$kar->tempat_lahir}}</td>
+                <td>{{$kar->tgl_lahir}}</td>
+                <td>{{$kar->tempat_lahir}}</td>
+                <td>{{$kar->jenis_kelamin}}</td>
+                <td>{{$kar->agama}}</td>
+                <td>{{$kar->alamat}}</td>
+                <td>{{$kar->kelurahan}}</td>
+                <td>{{$kar->kecamatan}}</td>
+                <td>{{$kar->provinsi}}</td>
                 <td>
                     <div class="btn-group" style="width:135px">
                         <form action="{{route('pegawai.delete',$kar->id)}}" method="POST">

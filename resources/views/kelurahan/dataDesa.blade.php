@@ -21,7 +21,7 @@
                 <td>{{$des->id}}</td>
                 <td>{{$des->kode}}</td>
                 <td>{{$des->nama_kelurahan}}</td>
-                <td>{{$des->nama_desamatan}}</td>
+                <td>{{$des->nama_kecamatan}}</td>
                 <td>
                     <div class="custom-control custom-checkbox">
 
